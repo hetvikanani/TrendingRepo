@@ -6,11 +6,7 @@ const fetchRepoAPI = async (page, date) => {
     base_url +
     `/search/repositories?q=created:>${date}&sort=stars&order=desc&page=${page}`;
 
-  return axios.get(url, {
-    headers: {
-      Authorization: "Bearer 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",
-    },
-  });
+  return axios.get(url);
 };
 
 export default fetchRepoAPI;
